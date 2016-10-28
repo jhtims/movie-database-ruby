@@ -4,13 +4,16 @@ A prototype movie database program to add, update, display, and delete movies an
 movies = {Every_Which_Way_But_Loose: 10,
 iRobot: 7
 }
+def greeting 
+    puts "Welcome to my Movie Review Database 1.0!"
+    puts "MAIN MENU"
+    puts "-- Type 'add' to add a movie."
+    puts "-- Type 'update' to update a movie's rating you've already added."
+    puts "-- Type 'display' to display all movies."
+    puts "-- Type 'delete' to delete a movie."
+end
 
-puts "Welcome to my Movie Review Database 1.0!"
-puts "MAIN MENU"
-puts "-- Type 'add' to add a movie."
-puts "-- Type 'update' to update a movie's rating you've already added."
-puts "-- Type 'display' to display all movies."
-puts "-- Type 'delete' to delete a movie."
+greeting
 
 choice = gets.chomp.downcase
 
@@ -49,6 +52,10 @@ when "delete"
         puts "#{title} was deleted!"
     end
 else
-    puts "Error!"
+    puts "You need to type one of the four keywords to use the program. Type anything to go back to the main menu:"
+    error_type = gets.chomp
+    # reset program
 end
+
+
 
